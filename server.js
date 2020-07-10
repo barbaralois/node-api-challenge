@@ -13,3 +13,5 @@ server.use('/api/actions', actionRouter);
 server.get('/', (req, res) => {
   res.send(`<h1>Unit 4 Week 1 Sprint Challenge</h1>`);
 });
+
+module.exports = server;
