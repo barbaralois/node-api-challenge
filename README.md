@@ -40,13 +40,23 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Mention two parts of Express that you learned about this week.
 
+Express includes a router object which adds a lot of functionality, but one thing it allows you to do is set up your files around the routes, such as having a separate file for anything on /users or /posts. Express also includes the .json method, which is a build-in middleware that takes all incoming requests and parses them into JSON. This saves you the step of having to reformat it yourself before being able to use the data.
+
 - [ ] Describe Middleware?
+
+Middleware is the way we add additional functionality to our Express applications. They are essentially like an assembly line where the code runs through several different functions (in the order we apply them) and we can return different results based on different conditionals. For example, a middleware may be set up to validate an entry and if it doesn't meet the requirements it's "removed" from the assembly line and something is returned. If it does meet the requirements, it's passed on to the next middleware/function in the line.
 
 - [ ] Describe a Resource?
 
+We call the data being stored in the API a resource. Such as a user, post, comment, or any other item we may be keeping track of. A resource is created when we do a POST, for example, or we can GET a list of resources from the server.
+
 - [ ] What can the API return to help clients know if a request was successful?
 
+Sending the user a status (404, 500, 200, 201, etc) and message can help the user determine if their request was successful, or what they may need to modify in order to get their request to go through.
+
 - [ ] How can we partition our application into sub-applications?
+
+We can create sub-applications using the router functionality within Express, as I mentioned above. We can create separate files for the different resources in our Express app by creating different folders for the files related to a certain path (such as /posts). You can think of these almost like different components in React that were all linked back to app.js. All of the sub-applications here are branched out of server.js, for example, using server.use.
 
 ## Minimum Viable Product
 
